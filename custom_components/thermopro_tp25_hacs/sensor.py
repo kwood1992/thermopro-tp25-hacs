@@ -2,23 +2,22 @@
 
 from __future__ import annotations
 
-from homeassistant.components.sensor import SensorEntity
+from homeassistant.components.sensor import SensorDeviceClass, SensorEntity
 from homeassistant.const import PERCENTAGE, UnitOfTemperature
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.entity import DeviceInfo
-from homeassistant.components.sensor import SensorDeviceClass
-
-from .const import DOMAIN
-from .coordinator import ThermoProUpdateCoordinator, ThermoProConfigEntry
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from thermopro_tp25_ble import (
-    ProbeInfo,
     BatteryInfo,
-    ProbeReading,
     BatteryReading,
+    ProbeInfo,
+    ProbeReading,
     ThermoProTP25,
 )
+
+from .const import DOMAIN
+from .coordinator import ThermoProConfigEntry, ThermoProUpdateCoordinator
 
 
 async def async_setup_entry(
