@@ -2,6 +2,10 @@
     "name": "ludeeus/integration_blueprint",
     "image": "mcr.microsoft.com/devcontainers/python:3.13",
     "postCreateCommand": "scripts/setup",
+    "runArgs": [
+        "--device=/dev/bus/usb/002/002:/dev/bus/usb/002/002",
+        "--volume=/run/dbus:/run/dbus:ro"
+    ],
     "forwardPorts": [
         8123
     ],
