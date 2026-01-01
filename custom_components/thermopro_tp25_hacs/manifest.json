@@ -1,0 +1,18 @@
+{
+  "domain": "thermopro_tp25_hacs",
+  "name": "Thermopro TP25",
+  "codeowners": [
+    "@kwood1992"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/kwood1992/thermopro-tp25-hacs",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/kwood1992/thermopro-tp25-hacs/issues",
+  "version": "0.1.0",
+  "requirements": [
+    "thermopro-tp25-ble==0.1.0"
+  ],
+  "dependencies": [
+    "bluetooth_adapters"
+  ]
+}
